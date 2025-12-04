@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+**/dist/
+**/build/
+**/.next/
+**/cdk.out/
+cdk.out/
+
+# Compiled JavaScript files (but keep config files)
+*.js
+!jest.config.js
+!*.config.js
+!webpack.config.js
+!rollup.config.js
+
+# TypeScript declaration files
+*.d.ts
+
+# Testing
+**/coverage/
+**/.jest/
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# CDK
+cdk.context.json
+
+# TypeScript
+*.tsbuildinfo
+
+# AWS
+response.json
