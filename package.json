@@ -1,0 +1,27 @@
+{
+  "name": "mundimoto-scraper",
+  "version": "1.0.0",
+  "description": "Mundimoto motorcycle scraper - Lambda function and CDK infrastructure",
+  "private": true,
+  "workspaces": [
+    "lambda",
+    "infrastructure"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=lambda && npm run build --workspace=infrastructure",
+    "build:lambda": "npm run build --workspace=lambda",
+    "build:infra": "npm run build --workspace=infrastructure",
+    "test": "npm run test --workspace=lambda",
+    "test:watch": "npm run test:watch --workspace=lambda",
+    "test:coverage": "npm run test:coverage --workspace=lambda",
+    "cdk": "npm run cdk --workspace=infrastructure",
+    "deploy": "npm run deploy --workspace=infrastructure",
+    "synth": "npm run synth --workspace=infrastructure",
+    "diff": "npm run diff --workspace=infrastructure",
+    "clean": "rm -rf lambda/dist lambda/node_modules infrastructure/node_modules infrastructure/cdk.out node_modules"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
