@@ -17,12 +17,12 @@ export class MotorcycleProcessor {
 
     const now = new Date().toISOString();
 
-    // Filter out SCOOTER and MaxiScooter types
+    // Filter out SCOOTER and MaxiScooter types, and only keep 125cc motorcycles
     const excludedTypes = ['SCOOTER', 'MaxiScooter'];
     
     for (const motorcycle of motorcycles) {
-      // Skip SCOOTER and MaxiScooter types
-      if (excludedTypes.includes(motorcycle.motorbike_type)) {
+      // Skip excluded types and non-125cc motorcycles
+      if (excludedTypes.includes(motorcycle.motorbike_type) || motorcycle.cc !== 125) {
         continue;
       }
       
